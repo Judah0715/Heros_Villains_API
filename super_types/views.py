@@ -13,7 +13,7 @@ def super_types_list(request):
     super_types = SuperType.objects.all()
 
     if request.method == 'GET':
-        
+
         serializer = SuperTypeSerializer(super_types, many = True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
